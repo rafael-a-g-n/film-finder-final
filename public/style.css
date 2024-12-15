@@ -1,0 +1,165 @@
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #16213e;
+  --accent-color: #e94560;
+  --text-color: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: "Questrial", sans-serif;
+}
+
+#appTitle {
+  text-align: center;
+  margin: 20px auto;
+  font-family: "Staatliches", sans-serif;
+  font-size: clamp(40px, 8vw, 80px);
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#genreForm {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: var(--secondary-color);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+label {
+  display: block;
+  font-size: clamp(20px, 4vw, 35px);
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid var(--accent-color);
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#playBtn {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 40px;
+  font-size: clamp(18px, 3vw, 25px);
+  border-radius: 50px;
+  border: none;
+  background: var(--accent-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+}
+
+#playBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#movieInfo {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: var(--secondary-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+#moviePoster,
+#movieText {
+  flex: 1 1 300px;
+}
+
+img#moviePoster {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+#movieText {
+  padding: 20px;
+}
+
+#movieTitle {
+  font-size: clamp(24px, 4vw, 36px);
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+#movieOverview {
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.6;
+}
+
+#likeOrDislikeBtns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+#likeBtn,
+#dislikeBtn {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+}
+
+#likeBtn {
+  background: #00b894;
+  color: white;
+}
+
+#dislikeBtn {
+  background: #d63031;
+  color: white;
+}
+
+#likeBtn:hover,
+#dislikeBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #movieInfo {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #likeOrDislikeBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
